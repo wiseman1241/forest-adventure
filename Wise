@@ -1,0 +1,45 @@
+def start_game():
+    print("Welcome to the Mysterious Forest!")
+    print("You find yourself at the edge of a dark forest. The path splits into two.")
+    choice = input("Do you go LEFT or RIGHT? ").strip().lower()
+
+    if choice == "left":
+        path_left()
+    elif choice == "right":
+        path_right()
+    else:
+        print("Invalid choice. Please try again.")
+        start_game()
+
+def path_left():
+    print("\nYou take the left path and find a glowing cave.")
+    print("Inside the cave, you see a treasure chest and a sleeping dragon.")
+    choice = input("Do you OPEN the chest or LEAVE quietly? ").strip().lower()
+
+    if choice == "open":
+        print("\nThe dragon wakes up and breathes fire! You barely escape with your life.")
+        print("Game Over!")
+    elif choice == "leave":
+        print("\nYou leave the cave quietly and find a hidden path leading to safety.")
+        print("Congratulations! You survived the forest.")
+    else:
+        print("Invalid choice. Please try again.")
+        path_left()
+
+def path_right():
+    print("\nYou take the right path and encounter a river.")
+    print("You can see a bridge in the distance, but the river looks shallow enough to cross.")
+    choice = input("Do you CROSS the river or take the BRIDGE? ").strip().lower()
+
+    if choice == "cross":
+        print("\nYou slip on a rock and fall into the river. The current sweeps you away.")
+        print("Game Over!")
+    elif choice == "bridge":
+        print("\nYou carefully cross the bridge and find a village on the other side.")
+        print("Congratulations! You made it to safety.")
+    else:
+        print("Invalid choice. Please try again.")
+        path_right()
+
+# Start the game
+start_game()
